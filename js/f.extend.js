@@ -1,5 +1,5 @@
 /**
- * Реализация наследования.
+ * Наследование.
  * @static
  */
 f.extend = function(subClass, superClass) {
@@ -7,8 +7,5 @@ f.extend = function(subClass, superClass) {
 	F.prototype = superClass.prototype;
 	subClass.prototype = new F();
 	subClass.prototype.constructor = subClass;
-	subClass.superclass = superClass.prototype;
-	if(superClass.prototype.constructor == Object.prototype.constructor) {
-		superClass.prototype.constructor = superClass;
-	}
+	subClass.prototype.superclass = superClass.prototype;
 };
