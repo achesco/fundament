@@ -7,8 +7,8 @@
  * @returns {Object} Хэш найденных пар ключ-значение. 
  */
 f.util.parseLocationHash = function(groupDelim, valueDelim) {
-	groupDelim = "|";
-	valueDelim = "=";
+	groupDelim = groupDelim || "|";
+	valueDelim = valueDelim || "=";
 	var string = location.hash.split("#")[1] || "";
 	var info = {
 		_: string
